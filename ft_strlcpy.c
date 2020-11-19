@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 19:18:57 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/19 19:24:38 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/19 19:26:50 by sshakya           #+#    #+#             */
+/*   Updated: 2020/11/19 19:52:40 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static size_t	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ static size_t	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	l;
 	char			*ret;
