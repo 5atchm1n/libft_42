@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:40:32 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/19 18:53:44 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/20 19:33:52 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	int	ft_strlen(const char *s)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -24,11 +24,11 @@ static	int	ft_strlen(const char *s)
 	return (i);
 }
 
-int		ft_strlcat(char *dst, const char *src, size_t size)
+int			ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	s;
-	size_t	d;
+	size_t		i;
+	size_t		s;
+	size_t		d;
 
 	d = ft_strlen(dst);
 	i = d;

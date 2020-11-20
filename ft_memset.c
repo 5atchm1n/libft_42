@@ -6,24 +6,23 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 00:21:51 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/20 00:44:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/20 19:28:59 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- 
- #include <stddef.h>
- 
- void *ft_memset(void *s, int c, size_t n)
- {
- 	char	*str;
+
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	char	*str;
 	size_t	i;
 
 	str = s;
 	i = 0;
 	while (i < n)
 	{
-	*(str + i) = c;
-	i++;
+		*(str + i) = c;
+		i++;
 	}
-
 	return (s);
- }
+}

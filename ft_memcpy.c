@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 00:14:13 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/20 19:30:04 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/20 15:28:49 by sshakya           #+#    #+#             */
+/*   Updated: 2020/11/20 19:26:40 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	strlen(const char *s)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (*src && i <= n)
 	{
+		src[i] = dest[i];
 		i++;
 	}
-	return (i);
+	return (dest);
 }

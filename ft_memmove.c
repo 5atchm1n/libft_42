@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 00:14:13 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/20 19:30:04 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/20 15:33:50 by sshakya           #+#    #+#             */
+/*   Updated: 2020/11/20 19:27:33 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	strlen(const char *s)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	char	*s;
+	char	*d;
+	size_t	i;
 
-	i = 0;
-	while (s[i] != '\0')
+	s = (char *)src;
+	d = (char *)dest;
+	while (i < n)
 	{
+		d[i] = s[i];
 		i++;
 	}
-	return (i);
+	return (dest);
 }
