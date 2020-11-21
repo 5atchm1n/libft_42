@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 14:59:20 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 15:26:59 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/21 16:04:00 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void	*calloc(size_t num, size_t size)
 {
 	size_t	t;
 	size_t	i;
-	void *ret;
+	void	*ret;
 
 	if (!num || !nsize)
-		return(NULL);
+		return (NULL);
 	t = num * size;
 	if (size != t / num)
-		return(NULL);
+		return (NULL);
 	i = 0;
-	if(!(ret = malloc(t)))
+	if (!(ret = malloc(t)))
 		return (NULL);
 	while (i < num)
 	{
