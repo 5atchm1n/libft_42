@@ -6,11 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 03:48:25 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 04:16:53 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/24 21:43:58 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int	size;
 	int	num;

@@ -6,15 +6,16 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:27:37 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 16:29:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/24 04:26:44 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stddef.h>
 
-static	int		ft_strlen(char *src)
+static size_t	ft_strlen(char *src)
 {
-	int	l;
+	size_t	l;
 
 	l = 0;
 	while (src[l] != '\0')
@@ -22,9 +23,9 @@ static	int		ft_strlen(char *src)
 	return (l);
 }
 
-char			*ft_strdup(const char *s)
+char		*ft_strdup(const char *s)
 {
-	int	i;
+	size_t	i;
 	char	*dup;
 
 	i = 0;

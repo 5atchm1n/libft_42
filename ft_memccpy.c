@@ -6,13 +6,13 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:36:02 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/20 19:39:10 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/24 21:56:29 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t		i;
 	char		*d;
