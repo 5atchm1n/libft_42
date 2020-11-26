@@ -6,24 +6,23 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:45:42 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 03:09:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:35:01 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char	*str;
-	char	ch;
-	size_t	i;
+	unsigned char	*new_str;
+	size_t		i;
 
-	str = (char *)s;
+	new_str = (unsigned char *)str;
 	i = 0;
 	while (i < n)
 	{
-		if (*str == (unsigned char)c)
-			return (str);
+		if (*new_str == (unsigned char)c)
+			return (new_str);
 		str++;
 	}
 	return (NULL);

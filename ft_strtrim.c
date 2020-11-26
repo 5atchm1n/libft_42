@@ -6,22 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 03:28:58 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/23 14:41:36 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 17:19:38 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-static	size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 static	size_t	ft_in_set(char c, const char *str)
 {
@@ -61,6 +50,7 @@ static	size_t	ft_end(const char *str, const char *set, size_t len)
 	size_t	end;
 
 	end = 0;
+	i = 0;
 	while (len > 0)
 	{
 		if (ft_in_set(str[i], set))
@@ -79,7 +69,8 @@ char			*ft_strtrim(char const *str, char const *set)
 	size_t		len;
 	char		*ret;
 
-	len = ft_strlen(str) - (ft_start(str, set) + ft_end(str, set, len));
+	len = ft_strlen(str);
+	len = len - (ft_start(str, set) + ft_end(str, set, len));
 	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = ft_start(str, set);

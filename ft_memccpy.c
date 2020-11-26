@@ -6,26 +6,26 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 15:36:02 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/24 21:56:29 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:34:42 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t		i;
-	char		*d;
-	char		*s;
+	unsigned char	*new_dest;
+	unsigned char	*new_src;
 
+	new_dest = dest;
+	new_src = (unsigned char *)src;
 	i = 0;
-	d = (char *)dest;
-	s = (char *)src;
 	while (i < n)
 	{
-		d[i] = s[i];
-		if ((unsigned char)s[i] == (unsigned char)c)
-			return ((char *)dest + i + 1);
+		new_dest[i] = new_src[i];
+		if (new_src[i] == c)
+			return (dest + (i + 1));
 		i++;
 	}
 	return (NULL);

@@ -6,11 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:40:34 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 04:18:45 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:41:48 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 {

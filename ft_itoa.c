@@ -6,11 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:16:17 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/24 04:32:14 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 16:20:09 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_power_ten(int i)
 {
@@ -33,7 +33,7 @@ static void	ft_prepend(char c, char *str, int len)
 		str[len] = c;
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int	i;
 	int	len;

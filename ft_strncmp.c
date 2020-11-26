@@ -6,11 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 03:37:54 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/21 04:20:30 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:41:27 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {

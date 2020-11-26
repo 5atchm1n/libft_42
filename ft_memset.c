@@ -6,11 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 00:21:51 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/20 19:28:59 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:38:28 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

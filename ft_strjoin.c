@@ -6,24 +6,11 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 16:46:34 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/23 14:48:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/25 03:39:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t		ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
