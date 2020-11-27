@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:45:42 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 03:35:01 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:04:10 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	{
 		if (*new_str == (unsigned char)c)
 			return (new_str);
-		str++;
+		new_str++;
+		i++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 19:55:56 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 03:36:11 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/26 23:16:56 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (*str1 == *str2)
-		{
-			str1++;
-			str2++;
-		}
-		return (*str2 - *str1);
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
+		i++;
 	}
 	return (0);
 }

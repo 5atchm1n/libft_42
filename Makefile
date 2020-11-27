@@ -6,13 +6,13 @@
 #    By: sshakya <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/24 00:09:13 by sshakya           #+#    #+#              #
-#    Updated: 2020/11/26 02:46:14 by sshakya          ###   ########.fr        #
+#    Updated: 2020/11/26 17:39:48 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-HEADER = ./includes/
+INCLUDE = libft.h
 
 SRCS =	ft_atoi.c \
 	ft_bzero.c \
@@ -47,7 +47,7 @@ SRCS =	ft_atoi.c \
 	ft_strtrim.c \
 	ft_substr.c \
 	ft_tolower.c \
-	ft_toupper.c 
+	ft_toupper.c \
 
 BONUS = ft_lsadd_front.c \
 	ft_lstadd_back.c \
@@ -59,17 +59,19 @@ BONUS = ft_lsadd_front.c \
 	ft_lstnew.c \
 	ft_lstsize \
 
+INCLUDE = libft.h
+
 BONUSOBJS = ${BONUS:.c=.o}
 
-OBJS = $(SRCS:.c=.o)
+OBJS = ${SRCS:.c=.o}
 
 CC = gcc
 
 RM = rm -f
 
-CFLAGS	= -Wall -Wextra -Werror -I ${HEADER}
+CFLAGS	= -Wall -Wextra -Werror
 
-$(NAME) : $(OBJS)
+$(NAME) : ${OBJS} ${INCLUDE}
 	ar rcs ${NAME} ${OBJS}
 
 .c.o:

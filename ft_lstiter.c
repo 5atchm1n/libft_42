@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 02:14:05 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/26 02:20:06 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/27 02:46:39 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
 	{
-		(*f)(lst->content)
+		(*f)(lst->content);
 		lst++;
 	}
 }

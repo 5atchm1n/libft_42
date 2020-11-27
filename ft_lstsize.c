@@ -6,20 +6,20 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:12:20 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 23:15:34 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/27 02:46:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst);
+int	ft_lstsize(t_list *lst)
 {
 	int size;
 
 	size = 0;
-	if (*lst == NULL)
-		return (NULL);
-	while(*lst != 0)
+	if (lst == NULL)
+		return (0);
+	while(lst != NULL)
 	{
 		lst++;
 		size++;

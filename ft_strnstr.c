@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:40:34 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 03:41:48 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/27 01:35:58 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,20 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!s2)
+	if (!(ft_strlen(s2)))
 		return ((char *)s1);
 	while (*s1 && i < len)
 	{
 		if (*s1 == *s2)
 		{
-			while (*s2 && *(s1 + j) == *(s2 + j))
+			while (*(s2 + j) != '\0')
+			{
+				if (*(s1 + j) != *(s2 + j))
+					return (NULL);
+				if (j + i >= len)
+					return (NULL);
 				j++;
+			}
 			return ((char *)s1);
 		}
 		s1++;
