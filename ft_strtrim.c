@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 03:28:58 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 17:19:38 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/27 17:35:25 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,15 @@ static size_t	ft_start(const char *str, const char *set)
 
 static	size_t	ft_end(const char *str, const char *set, size_t len)
 {
-	size_t	i;
 	size_t	end;
 
 	end = 0;
-	i = 0;
 	while (len > 0)
 	{
-		if (ft_in_set(str[i], set))
+		if (ft_in_set(str[len], set))
 			end++;
 		len--;
-		if (!(ft_in_set(str[i], set)))
+		if (!(ft_in_set(str[len], set)))
 			return (end);
 	}
 	return (0);
