@@ -6,53 +6,57 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 00:16:17 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 16:20:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/29 00:13:22 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_power_ten(int i)
+static int			ft_power_ten(int i)
 {
-	int	len;
+	int				len;
+	unsigned int	n;
 
-	len = 1;
-	while (i > 9)
+	len = 0;
+	if (i == 0)
+		return (1);
+	if (i < 0)
+		n = i * (-1);
+	else
+		n = i;
+	while (n != 0)
 	{
-		i = i / 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
 }
 
-static void	ft_prepend(char c, char *str, int len)
+char				*ft_itoa(int n)
 {
-	if (len != 0)
-		str[len - 1] = c;
-	if (len == 0)
-		str[len] = c;
-}
+	int				l;
+	char			*ret;
+	unsigned int	num;
 
-char		*ft_itoa(int n)
-{
-	int	i;
-	int	len;
-	char	c;
-	char	*ret;
-
-	len = ft_power_ten(n);
-	if (!(ret = malloc(sizeof(int) * (len + 1))))
+	l = ft_power_ten(n);
+	if (n < 0)
+		l++;
+	if (!(ret = malloc(sizeof(char) * (l + 1))))
 		return (NULL);
-	ret[len] = '\0';
-	i = n;
-	while (i > 9)
+	ret[l] = '\0';
+	if (n == 0)
+		ret[0] = '0';
+	if (n < 0)
 	{
-		c = (i % 10) + '0';
-		ft_prepend(c, ret, len);
-		i = i / 10;
-		len--;
+		n *= -1;
+		ret[0] = '-';
 	}
-	c = (i % 10) + 48;
-	ft_prepend(c, ret, len);
+	num = n;
+	while (num != 0)
+	{
+		ret[l - 1] = (num % 10) + '0';
+		num = num / 10;
+		l--;
+	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 22:17:09 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/27 01:53:38 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 02:32:25 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
-
 	return (new);
 }

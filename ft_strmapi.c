@@ -6,15 +6,15 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 22:22:13 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 02:23:05 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 02:52:30 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*ret;
+	char			*ret;
 	unsigned int	len;
 	unsigned int	i;
 

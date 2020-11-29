@@ -6,17 +6,17 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:21:09 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/27 00:57:14 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 02:53:12 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strrchr(const char *str, int c)
+char				*ft_strrchr(const char *str, int c)
 {
-	size_t		i;
-	unsigned char 	ch;
-	char	*s;
+	size_t			i;
+	unsigned char	ch;
+	char			*s;
 
 	i = ft_strlen(str);
 	ch = (unsigned char)c;
@@ -28,6 +28,6 @@ char		*ft_strrchr(const char *str, int c)
 		i--;
 	}
 	if (*s == ch)
-		return(s);
+		return (s);
 	return (NULL);
 }

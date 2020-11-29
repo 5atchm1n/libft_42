@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 23:16:40 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/26 00:07:07 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 23:37:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst == NULL)
 		return (NULL);
-	while (*lst != NULL)
+	while (lst->next != NULL)
 		lst++;
-	return (last);
+	return (lst);
 }

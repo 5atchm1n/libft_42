@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 03:48:25 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/26 23:48:57 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 03:08:46 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	ft_atoi(const char *str)
 		if (*str == '-' || *str == '+')
 			str++;
 		if (ft_isdigit(*str))
-		{	num = num * 10 + (*str - '0');
+		{
+			num = num * 10 + (*str - '0');
 			str++;
 		}
 		if (!(ft_isdigit(*str)))

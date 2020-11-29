@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 03:45:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 00:02:56 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t		ft_size(char const *str, char c)
 	while (*str != '\0')
 	{
 		if (*(str + 1) == '\0')
-			return (size);
+			return (size + 1);
 		if (*str == c && *(str + 1) != c)
 			size++;
 		str++;

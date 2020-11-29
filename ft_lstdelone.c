@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 00:31:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/27 02:08:18 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/28 02:32:07 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst == NULL)
-		return	;
+		return ;
 	del(lst->content);
 	free(lst);
 }
