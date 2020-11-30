@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 02:01:38 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/28 06:14:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/11/30 15:20:22 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 	t_list	*next;
 
+	if (!lst)
+		return ;
 	temp = *lst;
 	while (temp != NULL)
 	{
