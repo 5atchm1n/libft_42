@@ -6,15 +6,15 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/28 00:02:56 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/01 18:31:02 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_size(char const *str, char c)
+static size_t		ft_size(char const *str, char c)
 {
-	size_t	size;
+	size_t			size;
 
 	size = 0;
 	if (c == '\0')
@@ -30,10 +30,10 @@ size_t		ft_size(char const *str, char c)
 	return (size);
 }
 
-char		*ft_set_string(char const *str, size_t len)
+static char			*ft_set_string(char const *str, size_t len)
 {
-	size_t	i;
-	char	*ret;
+	size_t			i;
+	char			*ret;
 
 	if (!(ret = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
@@ -49,12 +49,12 @@ char		*ft_set_string(char const *str, size_t len)
 	return (ret);
 }
 
-char		**ft_split(char const *str, char c)
+char				**ft_split(char const *str, char c)
 {
-	char	**tab;
-	size_t	size;
-	size_t	len;
-	size_t	n;
+	char			**tab;
+	size_t			size;
+	size_t			len;
+	size_t			n;
 
 	size = ft_size(str, c);
 	if (!(tab = malloc(sizeof(char*) * (size + 1))))
