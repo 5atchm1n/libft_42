@@ -6,7 +6,7 @@
 #    By: sshakya <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/24 00:09:13 by sshakya           #+#    #+#              #
-#    Updated: 2020/11/29 07:28:42 by sshakya          ###   ########.fr        #
+#    Updated: 2020/12/02 10:45:46 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,6 @@ all : ${NAME}
 
 
 bonus:	${BONUSOBJS} ${OBJS}
-		${CC} ${FLAGS} -c ${SRCS} ${BONUS}
 		ar rcs ${NAME} ${OBJS} ${BONUSOBJS} ${INCLUDE}
 
 norm :
@@ -99,4 +98,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean re fclean
+.PHONY : all clean re fclean so norm bonus
