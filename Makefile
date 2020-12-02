@@ -6,7 +6,7 @@
 #    By: sshakya <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/24 00:09:13 by sshakya           #+#    #+#              #
-#    Updated: 2020/12/02 10:45:46 by sshakya          ###   ########.fr        #
+#    Updated: 2020/12/02 11:19:32 by sshakya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ RM = rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
 $(NAME) : ${OBJS} ${INCLUDE}
-	ar rcs ${NAME} ${OBJS}
+	ar rcs $@ $?
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -81,7 +81,7 @@ all : ${NAME}
 
 
 bonus:	${BONUSOBJS} ${OBJS}
-		ar rcs ${NAME} ${OBJS} ${BONUSOBJS} ${INCLUDE}
+		ar rcs ${NAME} $?
 
 norm :
 	~/.norminette/norminette.rb ${SRCS} ${BONUS} ${INCLUDE}
