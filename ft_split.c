@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/02 22:21:26 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/03 06:16:09 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,8 @@ char				**ft_split(char const *str, char c)
 	if (!(tab = malloc(sizeof(char*) * (size + 1))))
 		return (NULL);
 	tab[size] = NULL;
-	if (!str)
-		return (tab);
 	n = 0;
-	while (size-- > 0)
+	while (size-- > 0 && str)
 	{
 		len = 0;
 		while (str && *str == c)
