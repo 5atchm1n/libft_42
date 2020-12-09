@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/03 06:16:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/09 12:46:20 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static void			*ft_reset(char **tab, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (tab[i])
 			free(tab[i]);
+			i++;
 	}
 	free(tab);
 	return (NULL);
