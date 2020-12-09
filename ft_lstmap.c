@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 02:23:26 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/02 22:52:20 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/09 17:41:15 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			return (NULL);
 		}
 		new = ft_lstnew(temp);
-		if (new == NULL)
+		if (new == NULL && del != NULL)
 		{
 			ft_lstclear(&head, del);
 			del(temp);
