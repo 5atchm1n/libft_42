@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/09 12:56:09 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/09 19:46:17 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,9 @@ char				**ft_split(char const *str, char c)
 	while (size-- > 0 && str)
 	{
 		len = 0;
-		while (str && *str == c)
+		while (*str && *str == c)
 			str++;
-		while (str && *str != c)
+		while (*str && *str != c)
 		{
 			len++;
 			str++;
