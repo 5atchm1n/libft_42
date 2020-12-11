@@ -6,7 +6,7 @@
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:58:39 by sshakya           #+#    #+#             */
-/*   Updated: 2020/12/09 19:46:17 by sshakya          ###   ########.fr       */
+/*   Updated: 2020/12/11 16:17:22 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ static size_t		ft_size(char const *str, char c)
 	end = 1;
 	if (!str)
 		return (size);
-	if (c == '\0')
-		return (1);
 	while (*str != '\0')
 	{
 		if (*str != c && end)
@@ -74,9 +72,8 @@ char				**ft_split(char const *str, char c)
 	size = ft_size(str, c);
 	if (!(tab = malloc(sizeof(char*) * (size + 1))))
 		return (NULL);
-	tab[size] = NULL;
 	n = 0;
-	while (size-- > 0 && str)
+	while (n < size)
 	{
 		len = 0;
 		while (*str && *str == c)
@@ -90,5 +87,6 @@ char				**ft_split(char const *str, char c)
 			return (ft_reset(tab, n));
 		n++;
 	}
+	tab[size] = NULL;
 	return (tab);
 }
