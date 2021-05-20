@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 17:40:32 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/25 03:40:49 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/21 14:59:20 by sshakya           #+#    #+#             */
+/*   Updated: 2021/05/19 04:27:15 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strlcat(char *dst, char const *src, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
-	size_t		i;
-	size_t		s;
-	size_t		d;
+	void	*ret;
 
-	d = ft_strlen(dst);
-	i = d;
-	if (size == 0)
-		return (ft_strlen(src));
-	if (size < d)
-		return (size + ft_strlen(src));
-	s = 0;
-	if (size > i)
-		while (src[s] && size - i > 1)
-		{
-			dst[i] = src[s];
-			i++;
-			s++;
-		}
-	dst[i] = '\0';
-	while (src[s] != '\0')
-		s++;
-	return (d + s);
+	ret = malloc(num * size);
+	if (ret == NULL)
+		return (NULL);
+	ft_bzero(ret, (num * size));
+	return ((void *)ret);
 }

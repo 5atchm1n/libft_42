@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 22:22:13 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/28 02:52:30 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/20 19:45:42 by sshakya           #+#    #+#             */
+/*   Updated: 2021/05/19 04:29:03 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	char			*ret;
-	unsigned int	len;
-	unsigned int	i;
+	unsigned char	*new_str;
+	size_t			i;
 
-	if (s == NULL || f == NULL)
-		return (NULL);
-	len = ft_strlen(s);
-	if (!(ret = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
+	new_str = (unsigned char *)str;
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
 	{
-		ret[i] = f(i, s[i]);
+		if (*new_str == (unsigned char)c)
+			return (new_str);
+		new_str++;
 		i++;
 	}
-	ret[i] = '\0';
-	return (ret);
+	return (NULL);
 }

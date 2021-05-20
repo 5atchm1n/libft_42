@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 19:45:42 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/28 02:51:57 by sshakya          ###   ########.fr       */
+/*   Created: 2021/04/29 02:31:37 by sshakya           #+#    #+#             */
+/*   Updated: 2021/05/19 04:28:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memchr(const void *str, int c, size_t n)
+int	ft_isspace(char c)
 {
-	unsigned char	*new_str;
-	size_t			i;
-
-	new_str = (unsigned char *)str;
-	i = 0;
-	while (i < n)
-	{
-		if (*new_str == (unsigned char)c)
-			return (new_str);
-		new_str++;
-		i++;
-	}
-	return (NULL);
+	if ((c > 8 && c < 14) || c == 32)
+		return (1);
+	return (0);
 }

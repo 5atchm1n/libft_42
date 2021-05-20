@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 19:26:50 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/30 19:51:17 by sshakya          ###   ########.fr       */
+/*   Created: 2020/11/21 15:27:37 by sshakya           #+#    #+#             */
+/*   Updated: 2021/05/19 18:45:50 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strdup(const char *src)
 {
-	size_t	l;
-	char	*ret;
+	size_t	i;
+	char	*dup;
 
-	ret = dest;
-	l = ft_strlen(src);
-	if (size == 0)
-		return (l);
-	size = size - 1;
-	while (*src != '\0' && size > 0)
+	i = 0;
+	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (dup == NULL)
+		return (NULL);
+	while (src[i] != '\0')
 	{
-		*ret = *src;
-		ret++;
-		src++;
-		size--;
+		dup[i] = src[i];
+		i++;
 	}
-	*ret = '\0';
-	return (l);
+	dup[i] = '\0';
+	return (dup);
 }

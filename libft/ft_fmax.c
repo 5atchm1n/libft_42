@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_fmax.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sshakya <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sshakya <sshakya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 15:25:47 by sshakya           #+#    #+#             */
-/*   Updated: 2020/11/28 02:50:30 by sshakya          ###   ########.fr       */
+/*   Created: 2021/04/29 02:28:42 by sshakya           #+#    #+#             */
+/*   Updated: 2021/05/19 04:27:31 by sshakya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_bzero(void *s, size_t n)
+double	ft_fmax(double a, double b)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	str = s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	if (a > b)
+		return (a);
+	else
+		return (b);
 }
